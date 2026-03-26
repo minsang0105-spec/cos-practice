@@ -8,8 +8,7 @@ int uadd_ok(unsigned a, unsigned b)
 
 	if (sum < a)
 		return 0;
-	else
-		return 1;
+	return 1;
 }
 
 int tadd_ok(int a, int b)
@@ -19,7 +18,9 @@ int tadd_ok(int a, int b)
 
 	if (a > 0 && b > 0 && sum < 0)
 		return 0;//overflow
-	else if ( a < 0 && b
+	else if ( a < 0 && b < 0 && sum > 0)
+		return 0;
+	return 1;
 }
 
 int main(int argc, char *argv[])
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 	if (uadd_ok(x, y))
 		cout << "No overflow" << endl;
 	else
-		cout << "Overflow << endl;
+		cout << "Overflow" << endl;
 	
 	cout << "Signed Addition ===" << endl;
 	if (tadd_ok(a, b))
