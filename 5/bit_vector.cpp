@@ -3,8 +3,7 @@
 #include <cstring>
 #include <cmath>    
 #define BIT_VECTOR_LENGTH 4
-#define MSB_INDEX 1
-#define BIT_VECTOR_LENGTH 1
+#define MSB_INDEX BIT_VECTOR_LENGTH-1
 #define LSB_INDEX 0
 
 void print_command(char *argv[]);
