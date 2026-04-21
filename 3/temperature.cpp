@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 using namespace std;
 int ascii_to_int(char *);
 int main(int argc, char *argv[])
